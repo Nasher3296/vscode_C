@@ -1,0 +1,56 @@
+[
+    
+    //Borar linea
+    {
+        "key": "ctrl+alt+backspace",
+        "command": "editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    //Ir al final de la linea
+    {
+        "key": "ctrl+alt+right ctrl+alt+right",
+        "command": "cursorLineEnd"
+    },
+    //Seleccionar hasta el final de la linea
+    {
+        "key": "ctrl+shift+alt+right ctrl+shift+alt+right",
+        "command": "cursorLineEndSelect"
+    },
+    //Ir al principio de la linea
+    {
+        "key": "ctrl+alt+left ctrl+alt+left",
+        "command": "cursorLineStart"
+    },
+    //Seleccionar hasta el principio de la linea
+    {
+        "key": "ctrl+shift+alt+left ctrl+shift+alt+left",
+        "command": "cursorLineStartSelect"
+    },
+
+
+    //Correr tareas
+    //C
+        //Correr
+        {
+            "key": "ctrl+shift+r",
+            "command": "workbench.action.tasks.runTask",
+            "args": "C. Run"
+        },
+
+    //UNBINDED
+        {
+            "key": "ctrl+shift+r",
+            "command": "-editor.action.refactor",
+            "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+        },
+        {
+            "key": "ctrl+shift+r",
+            "command": "-rerunSearchEditorSearch",
+            "when": "inSearchEditor"
+        },
+        {
+            "key": "ctrl+shift+r",
+            "command": "-workbench.action.quickOpenNavigatePreviousInRecentFilesPicker",
+            "when": "inQuickOpen && inRecentFilesPicker"
+        }
+]
